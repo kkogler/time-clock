@@ -1,22 +1,20 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.server.tsbuildinfo",
     "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
     "lib": ["ES2022"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "types": ["node"],
-    "skipLibCheck": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
+    "outDir": "./dist/server",
+    "rootDir": "./",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noUncheckedSideEffectImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "composite": true,
-    "noEmit": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
   },
-  "include": ["server/**/*.ts"]
+  "include": ["server/**/*"],
+  "exclude": ["node_modules"]
 }
 

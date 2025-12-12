@@ -1,0 +1,61 @@
+# Cursor AI Rules for Time Clock App
+
+## Project Context
+This is a Time Clock application with:
+- Frontend: React 19 + TypeScript + Vite
+- Backend: Express + TypeScript
+- Database: Prisma + PostgreSQL (Railway) - Coming in Step 2
+
+## Code Style Guidelines
+- Use TypeScript strict mode
+- Use async/await for asynchronous operations
+- Use ES6+ features
+- Follow existing naming conventions
+- Add comments for complex logic
+
+## File Organization
+- Backend API routes: `server/index.ts`
+- Frontend components: `src/`
+- Database schema: `prisma/schema.prisma` (Step 2)
+- Types: Define inline or in separate `.types.ts` files
+
+## API Conventions
+- All API routes prefixed with `/api`
+- Use RESTful conventions
+- Return proper HTTP status codes
+- Include error handling with try/catch
+- Validate request parameters
+
+## Development Workflow
+- Run both servers: `npm run dev`
+- Frontend: http://localhost:5173
+- Backend: http://localhost:3001
+- API calls from frontend proxy through Vite to backend
+
+## Common Tasks
+When asked to add features:
+1. Backend: Add route in `server/index.ts`
+2. Frontend: Create component in `src/`
+3. Connect via fetch/axios to `/api/*` endpoints
+4. Update types as needed
+
+## Database (Step 2)
+- Use Prisma Client for all database operations
+- Define models in `prisma/schema.prisma`
+- Run migrations after schema changes
+
+## Environment Variables
+- Never commit `.env` file
+- Add new variables to `.env.example`
+- Use `process.env.VARIABLE_NAME` to access
+
+## Testing
+- Test API endpoints with curl or Postman
+- Verify frontend changes in browser
+- Check console for errors
+
+## Helpful Commands
+- `npm run dev` - Start development
+- `npm run build` - Build for production
+- `npm run lint` - Check code quality
+
